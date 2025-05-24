@@ -1,0 +1,113 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #00ffe7;
+}
+
+h1 i {
+    margin-right: 10px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffc107;
+    border-left: 4px solid #00ffe7;
+    padding-left: 10px;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: "🎮 ";
+}
+
+.images-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.images-container img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.images-container img:hover {
+    transform: scale(1.05);
+}
+
+.btn-pdf {
+    display: block;
+    margin: 40px auto 0;
+    padding: 12px 28px;
+    background-color: #00ffe7;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background-color: #00cfc0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    section {
+        padding: 15px 20px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p, ul {
+        font-size: 1rem;
+    }
+
+    .images-container img {
+        max-width: 100%;
+    }
+}

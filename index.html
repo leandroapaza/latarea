@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Breve historia de la consola Nintendo GameCube, sus juegos, mando y personajes icónicos." />
+    <title>Historia de la consola GameCube</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1077/1077086.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <style>
+        /* RESET */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Press Start 2P', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00c3ff, #ffff1c);
+            color: #222;
+            margin: 0;
+            line-height: 1.5;
+        }
+        /* NAVBAR */
+        .navbar {
+            background: #e60012; /* rojo Nintendo */
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 10px rgba(230, 0, 18, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid #0066cc; /* azul Nintendo */
+        }
+        .navbar .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px #0006;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar .logo i {
+            font-size: 2em;
+            color: #fff700;
+            text-shadow: 1px 1px #a00;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: rgba(255 255 255 / 0.15);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #fff700;
+            color: #e60012;
+            text-decoration: none;
+        }
+        /* LAYOUT PRINCIPAL */
+        .main-container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        /* SIDEBAR */
+        .sidebar {
+            width: 220px;
+            background-color: #ffffffcc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 3px solid #e60012;
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+            box-shadow: 3px 3px 8px #b3000d99;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: #e60012;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: 700;
+            display: block;
+            padding: 8px 0;
+            letter-spacing: 1.2px;
+            border-bottom: 1px dotted #e60012;
+            transition: color 0.3s ease;
+        }
+        .sidebar a:hover {
+            color: #e60012;
+        }
+        /* CONTENIDO PRINCIPAL */
+        main {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 4px 4px 15px #00000022;
+            border: 4px solid #0066cc;
+        }
+        h1, h2 {
+            color: #e60012;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        h1 i {
+            color: #ffcc00;
+            text-shadow: 2px 2px #a00;
+            animation: bounce 2s infinite;
+            margin-right: 10px;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        ul {
+            margin-left: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        /* IMÁGENES */
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+
+        .image-card {
+            max-width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            padding: 0.5em;
+            background: #f9f9f9;
+        }
+
+        .image-card img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .image-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-info {
+            margin-top: 8px;
+            background-color: #e60012;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-info:hover {
+            background-color: #a0000a;
+        }
+
+        .info {
+            margin-top: 10px;
+            background-color: #fff4f4;
+            border: 2px solid #e60012;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #222;
+        }
+        /* BOTÓN PDF */
+        .btn-pdf {
+            background-color: #e60012;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 12px;
+            margin: 30px auto;
+            display: block;
+            transition: background-color 0.3s ease;
+            font-weight: 700;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px #b3000daa;
+        }
+        .btn-pdf:hover {
+            background-color: #a0000a;
+        }
+        /* GIF VIDEOJUEGOS */
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 20px;
+        }
+        .gif-container img {
+            width: 100px;
+            height: auto;
+            border-radius: 12px;
+            border: 3px solid #e60012;
+            box-shadow: 0 0 15px #ff0000cc;
+            animation: glow 2.5s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 15px #ff0000cc; }
+            to { box-shadow: 0 0 25px #ffbb00cc; }
+        }
+        /* Responsivo */
+        @media(max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+                padding: 10px;
+            }
+            .sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                margin-bottom: 20px;
+            }
+            .btn-pdf {
+                width: 100%;
+            }
+            .gif-container {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-gamepad"></i> GAMECUBE</div>
+        <nav>
+            <ul>
+                <li><a href="#contenido">Inicio</a></li>
+                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#imagenes">Imágenes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="main-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>SECCIONES</h3>
+            <ul>
+                <li><a href="#contenido">Historia</a></li>
+                <li><a href="#opiniones">Opiniones</a></li>
+                <li><a href="#personajes">Personajes</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#imagenes">Galería</a></li>
+                <li><a href="#pdf">Descargar PDF</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main id="contenido">
+            <h1><i class="fas fa-gamepad"></i> Historia de la consola GameCube</h1>
+
+            <!-- GIFS VIDEOJUEGOS -->
+            <div class="gif-container" aria-label="GIFs animados de videojuegos clásicos">
+                <img src="https://i.gifer.com/Z6W2.gif" alt="Link de Zelda moviéndose" />
+                <img src="https://i.gifer.com/g0eb.gif" alt="Pikachu animado" />
+                <img src="https://i.gifer.com/X11L.gif" alt="Fox McCloud disparando" />
+            </div>
+
+            <section>
+                <h2>¿En qué año se creó?</h2>
+                <p>El mando de la Nintendo GameCube fue creado por Nintendo y lanzado el 14 de septiembre de 2001 en Japón, marcando una nueva era en el diseño de controles para consolas.</p>
+            </section>
+
+            <section>
+                <h2>¿Quién lo creó?</h2>
+                <p>El mando fue desarrollado por el equipo de hardware de Nintendo bajo la supervisión de Shigeru Miyamoto, buscando un diseño ergonómico y funcional que fuera cómodo para largas sesiones de juego.</p>
+            </section>
+
+            <section id="opiniones">
+                <h2>Primeros modelos y críticas</h2>
+                <p>Antes del diseño final, Nintendo consideró varios prototipos para el mando, algunos con diseños muy diferentes, pero se decidió apostar por la simplicidad y comodidad, que luego fue muy apreciada por los jugadores.</p>
+            </section>
+
+            <section>
+                <h2>Opiniones de los jugadores</h2>
+                <p>Muchos consideran el mando de la GameCube uno de los más cómodos jamás creados, destacando la posición de sus botones y la sensación en la mano.</p>
+            </section>
+
+            <section>
+                <h2>¿En qué año fue más jugada la consola?</h2>
+                <p>La Nintendo GameCube tuvo su mayor auge en popularidad entre 2002 y 2004, con títulos exclusivos que marcaron la época y que aún son recordados con cariño.</p>
+            </section>
+
+            <section id="personajes">
+                <h2>Personajes icónicos</h2>
+                <ul>
+                    <li><strong>Link</strong>: Héroe de The Legend of Zelda, aventurero y valiente.</li>
+                    <li><strong>Samus Aran</strong>: Cazarrecompensas del universo Metroid.</li>
+                    <li><strong>Mario</strong>: El icónico plomero de Nintendo.</li>
+                    <li><strong>Donkey Kong</strong>: Fuerte y carismático gorila.</li>
+                    <li><strong>Pikachu</strong>: La mascota de Pokémon.</li>
+                </ul>
+            </section>
+
+            <section id="juegos">
+                <h2>Juegos más populares</h2>
+                <ul>
+                    <li>The Legend of Zelda: The Wind Waker</li>
+                    <li>Super Smash Bros. Melee</li>
+                    <li>Metroid Prime</li>
+                    <li>Mario Kart: Double Dash!!</li>
+                    <li>Luigi's Mansion</li>
+                </ul>
+            </section>
+
+            <section id="imagenes">
+                <h2>Galería de imágenes</h2>
+                <div class="images-container">
+                    <div class="image-card">
+                        <img src="imagenes/consola.jpg" alt="Consola Nintendo GameCube" loading="lazy" />
+                        <button class="btn-info" aria-expanded="false" aria-controls="info-consola">Características</button>
+                        <div class="info" id="info-consola" hidden>
+                            <p>La consola Nintendo GameCube fue lanzada en 2001, con un diseño compacto y color morado característico.</p>
+                            <ul>
+                                <li>CPU: IBM PowerPC Gekko a 485 MHz</li>
+                                <li>Memoria: 24 MB de RAM</li>
+                                <li>Soporte de disco óptico miniDVD de 1.5 GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="imagenes/mando.png" alt="Mando Nintendo GameCube" loading="lazy" />
+                        <button class="btn-info" aria-expanded="false" aria-controls="info-mando">Características</button>
+                        <div class="info" id="info-mando" hidden>
+                            <p>El mando de GameCube es reconocido por su ergonomía y diseño único:</p>
+                            <ul>
+                                <li>Botones analógicos y digitales</li>
+                                <li>Diseño ergonómico para comodidad prolongada</li>
+                                <li>Conexión por cable con puerto propietario</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pdf">
+                <button class="btn-pdf" onclick="window.open('history_gamecube.pdf', '_blank')">
+                    Descargar PDF
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Selecciona todos los botones de info
+        document.querySelectorAll('.btn-info').forEach(button => {
+            button.addEventListener('click', () => {
+                const infoPanel = document.getElementById(button.getAttribute('aria-controls'));
+                const isHidden = infoPanel.hasAttribute('hidden');
+
+                // Alternar visibilidad
+                if (isHidden) {
+                    infoPanel.removeAttribute('hidden');
+                    button.setAttribute('aria-expanded', 'true');
+                } else {
+                    infoPanel.setAttribute('hidden', '');
+                    button.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
